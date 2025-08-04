@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="admin-container">
+    <div class="admin-sidebar">
+        <h1>ANITRENDS CMS</h1>
+        <div class="section-tabs">
+            <button class="tab active" data-section="hot-takes">Hot Takes</button>
+            <button class="tab" data-section="new-trendy">New & Trendy</button>
+            <button class="tab" data-section="manga">Manga</button>
+            <!-- NEW: Recommendations Tab -->
+            <button class="tab" data-section="recommendations">Recommendations</button>
+            <button class="tab" data-section="settings">Settings</button>
+        </div>
+    </div>
+
+    <div class="admin-main">
+        <div class="content-section active" id="hot-takes">
+            <h2>Manage Hot Takes</h2>
+            <form id="hotTakesForm">
+                <input type="hidden" id="htPostId">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" id="htTitle" required>
+                </div>
+                <div class="form-group">
+                    <label>Content</label>
+                    <textarea id="htContent" required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Genre</label>
+                        <select id="htGenre">
+                            <option value="Action">Action</option>
+                            <option value="Comedy">Comedy</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Sci-Fi">Sci-Fi</option>
+                            <option value="Slice of Life">Slice of Life</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Supernatural">Supernatural</option>
+                            <option value="Thriller">Thriller</option>
+                            <option value="Mystery">Mystery</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Featured Image</label>
+                        <input type="file" id="htImage" accept="image/*">
+                    </div>
+                </div>
+                <button type="submit" id="htSubmitButton">Publish Hot Take</button>
+            </form>
+            <div class="posts-grid" id="hotTakesPosts"></div>
+        </div>
+
+        <div class="content-section" id="new-trendy">
+            <h2>Manage Trending Content</h2>
+            <form id="trendingForm">
+                <input type="hidden" id="trPostId">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" id="trTitle" required>
+                </div>
+                <div class="form-group">
+                    <label>Content</label>
+                    <textarea id="trContent" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Featured Image</label>
+                    <input type="file" id="trImage" accept="image/*" required>
+                </div>
+                <button type="submit" id="trSubmitButton">Mark as Trending</button>
+            </form>
+            <div class="posts-grid" id="trendingPosts"></div>
+        </div>
+
+        <div class="content-section" id="manga">
+            <h2>Manage Manga</h2>
+            <form id="mangaForm">
+                <input type="hidden" id="mgPostId">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" id="mgTitle" required>
+                </div>
+                <div class="form-group">
+                    <label>Content</label>
+                    <textarea id="mgContent" required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Genre</label>
+                        <select id="mgGenre">
+                            <option value="Action">Action</option>
+                            <option value="Comedy">Comedy</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Sci-Fi">Sci-Fi</option>
+                            <option value="Slice of Life">Slice of Life</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Supernatural">Supernatural</option>
+                            <option value="Thriller">Thriller</option>
+                            <option value="Mystery">Mystery</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Featured Image</label>
+                        <input type="file" id="mgImage" accept="image/*" required>
+                    </div>
+                </div>
+                <button type="submit" id="mgSubmitButton">Publish Manga</button>
+            </form>
+            <div class="posts-grid" id="mangaPosts"></div>
+        </div>
+
+        <!-- NEW: Recommendations Content Section -->
+        <div class="content-section" id="recommendations">
+            <h2>Manage Recommendations</h2>
+            <form id="recommendationsForm">
+                <input type="hidden" id="recPostId">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" id="recTitle" required>
+                </div>
+                <div class="form-group">
+                    <label>Content</label>
+                    <textarea id="recContent" required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Genre</label>
+                        <select id="recGenre">
+                            <option value="Action">Action</option>
+                            <option value="Comedy">Comedy</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Sci-Fi">Sci-Fi</option>
+                            <option value="Slice of Life">Slice of Life</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Supernatural">Supernatural</option>
+                            <option value="Thriller">Thriller</option>
+                            <option value="Mystery">Mystery</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Featured Image</label>
+                        <input type="file" id="recImage" accept="image/*" required>
+                    </div>
+                </div>
+                <button type="submit" id="recSubmitButton">Publish Recommendation</button>
+            </form>
+            <div class="posts-grid" id="recommendationsPosts"></div>
+        </div>
+
+        <div class="content-section" id="settings">
+            <h2>Admin Settings</h2>
+            <p>Content for general admin settings will go here.</p>
+        </div>
+
+    </div>
+</div>
+
+<script src="admin.js" type="module"></script>
+
+</body>
+</html>

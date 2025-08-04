@@ -1,0 +1,255 @@
+body {
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+    padding: 10px;
+    padding-bottom: 15px;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover{
+    color:#4CAF50;
+    transition: 0.5s ease;
+
+} 
+
+li a button{
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+li a button:hover{
+    cursor: pointer;
+    color: #000000;
+    background-color: #b56911c0;
+    transition: 1s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+li {
+    list-style-type: none;
+    margin: 0;
+}
+
+li a button:active {
+    cursor: pointer;
+    background-color: #4CAF50;
+    transition: 0.5s;
+    margin-top: 5px;
+}
+
+.logo {
+    margin-right: 10.5rem;
+    margin-left: 2rem;
+}
+
+.nav-items {
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+    gap: 60px;
+    margin-right: 90px;
+}
+
+.hero1 {
+    position: relative;
+    background-image: url('images/heroimg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90.4vh;
+    width: 100%;
+}
+
+.signup{
+    
+    opacity: 1;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.signup label{
+    
+    background: linear-gradient(to right, #313131 0%, #000000 100%);
+    color: white;
+    padding: 10px;
+    border: none;
+    top: 10px;
+    width: 70px;
+}
+
+
+.signup input{
+    background: whitesmoke;
+    color: rgb(31, 193, 31);
+    border-color: whitesmoke;
+    padding: 10px;
+    border: none;
+    width: 250px;
+    
+
+}
+
+.inputcont1{
+    background: whitesmoke;
+    padding: 15px;
+    padding-right: 20px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    width: 406px;
+
+}
+.inputcont{
+    background: whitesmoke;
+    padding: 15px;
+    padding-right: 20px;
+    margin-bottom: 25px;
+    width: 406px;
+
+}
+
+.regsubmitBtn{
+    background: rgba(135, 72, 8, 0.964);
+    font-weight: bold;
+    color: black;
+    padding: 15px;
+    display: block;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    width: 160px;
+    font-size: 18px;
+}
+
+.regsubmitBtn:hover{
+    background: rgba(0, 0, 0, 0.964);
+    color: rgba(135, 72, 8, 0.964);
+    transition: 0.3s;
+}
+
+.signup .myP{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 30px;
+    margin: 40px;
+}
+
+.menu {
+    display: none;
+}
+
+.google{
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25%;
+    margin-top: 1rem;
+    border-radius: 0.375rem;
+    padding: 10px;
+    width: 12rem;
+}
+
+.google p{
+    color: aliceblue;
+
+}
+
+.google img{
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+.google:hover{
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .nav-items {
+        margin-right: 0;
+        gap: 40px;
+    }
+
+    .logo {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    nav ul a {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        display: flex;
+        margin-left: auto;
+        position: relative;
+    }
+
+    .menu:active ul,
+    .menu:active ul,
+    .menu:active ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .menu:active ul,
+    .menu:focus ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .signup{
+        .menu:focus-within ul {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+}
+}
